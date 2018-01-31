@@ -1,0 +1,408 @@
+@import 'reset'; 
+@import 'font-family';
+ 
+
+/* 變數寫法-兩個以上的變數才需這樣寫 */
+@mixin hide-text{
+	text-indent: 101%;    
+	overflow: hidden;     
+	white-space: nowrap;  
+}
+
+.header h1{
+	background: #000;
+	@include hide-text;
+}
+
+ 
+@mixin circle($size,$bgcolor){
+	border-radius: 50%;
+	height: $size;
+	width:  $size;
+	font-size: $size / 3;
+	background: $bgcolor;
+}
+
+.box{
+	@include circle(30px,#000)
+}
+
+
+/* 變數寫法 END */
+
+
+
+
+.btn-outline-loch:hover{
+	color: #fff;
+}
+
+.form-control-br0 {
+    border-right:0; 
+    border-top-right-radius:0;
+    border-bottom-right-radius:0;
+    background-position: center
+}  
+
+@mixin loch{
+	color :#73b7cc;
+}
+
+.nav-text a{
+	color: white;
+}
+.nav-text a:hover{
+	@include loch;
+}
+
+.logo{
+	display:block;
+	width: 150px;
+	height: 46px;
+	text-indent:-99999px;
+	background:url(https://cdn.shopify.com/s/files/1/0170/3006/files/seaside-logo_bb584e7a-411c-4bbe-b9e9-d5183f264f5f_150x@2x.png?v=1486679008);
+	background-size: cover;
+	background-position: center center;	
+	a{
+	text-indent: 101%;    
+	overflow: hidden;     
+	white-space: nowrap;  
+	}
+}
+
+.navbg-light{
+    opacity: .9;
+}
+
+.header-carousel-item {
+      height: 350px;
+	}
+	
+.content-topimg-item{
+	min-height: 150px
+}	
+.bg-cover {
+      background-size: cover;
+      background-position: center center;
+
+	}	
+.box-shadow{
+    box-shadow: 0 3px 5px rgba(0,0,0,.16);
+    transition: box-shadow .3s;
+}
+.box-shadow:hover{
+    box-shadow: 0 4px 10px rgba(0,0,0,.24);
+}
+.card-img-top-item {
+	width: 100%;
+	border-top-left-radius:calc(0.25rem - 1px);
+	border-top-right-radius:calc(0.25rem - 1px);
+	min-height: 200px;
+}
+.card-img-top-item:hover{
+	opacity:.6;
+}
+.card-body h5:hover{
+	color :#73b7cc;
+}
+
+
+.ProductListWrap {
+            transition: all 0.3s;
+            left: 0px;
+            width: 100%;
+            a{
+            display: block;
+            transition: all 0.25s ease-in-out;
+            color: inherit;
+            background-color: transparent;
+            text-decoration: none;
+
+            }
+		}
+.ProductListWrap a:hover {
+            outline: 0;
+		}
+/* .ProductListWrap a img {
+            max-width: 100%;
+            height: auto;
+            border: 0;
+		} */
+.product {
+            position: absolute;
+            display: table;
+            top: 0;
+            left: 15px;
+            width: 94%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.9);
+            opacity: 0;
+            transition: opacity 0.25s ease-in-out;
+            text-align: center;
+            will-change: opacity;
+        }
+
+.ProductListWrap a:hover .product {
+            opacity: 1;
+        }
+
+.product-meta {
+            display: table-cell;
+            vertical-align: middle;
+            width: 100%;
+            height: 100%;
+		}
+.product-button {
+          	position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            display: inline-block;
+            padding: 12px 30px 13px 30px;
+            line-height: normal;
+            border-radius: 2px;
+            border: none;
+            text-transform: uppercase;
+            font-size: 14px;
+            transition: color 0.25s ease-in-out, background 0.25s ease-in-out;
+            text-align: center;
+          background: #73b7cc;
+        }    
+
+.product-button:hover{
+          background: #73b7cc;
+		}  
+		
+button{
+          position: relative;
+          display: inline-block;
+          padding: 12px 30px 13px 30px;
+          line-height: normal;
+          border-radius: 2px;
+          border: none;
+          text-transform: uppercase;
+          font-size: 14px;
+          transition: color 0.25s ease-in-out, background 0.25s ease-in-out;
+          text-align: center;
+}
+
+
+
+
+
+
+.PDList-ProductListWrap {
+            transition: all 0.3s;
+            left: 0px;
+            width: 100%;
+            a{
+            display: block;
+            transition: all 0.25s ease-in-out;
+            color: inherit;
+            background-color: transparent;
+            text-decoration: none;
+
+            }
+		}
+.PDList-ProductListWrap a:hover {
+            outline: 0;
+		}
+/* .ProductListWrap a img {
+            max-width: 100%;
+            height: auto;
+            border: 0;
+		} */
+.PDList-product {
+            position: absolute;
+            display: table;
+            top: 0;
+            left: 15px;
+            width: 90%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.9);
+            opacity: 0;
+            transition: opacity 0.25s ease-in-out;
+            text-align: center;
+            will-change: opacity;
+        }
+
+.PDList-ProductListWrap a:hover .PDList-product {
+            opacity: 1;
+        }
+
+.PDList-product-meta {
+            display: table-cell;
+            vertical-align: middle;
+            width: 100%;
+            height: 100%;
+		}
+.PDList-product-button {
+          	position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            display: inline-block;
+            padding: 12px 30px 13px 30px;
+            line-height: normal;
+            border-radius: 2px;
+            border: none;
+            text-transform: uppercase;
+            font-size: 14px;
+            transition: color 0.25s ease-in-out, background 0.25s ease-in-out;
+            text-align: center;
+          background: #73b7cc;
+        }    
+
+.PDList-product-button:hover{
+          background: #73b7cc;
+		}  
+		
+button{
+          position: relative;
+          display: inline-block;
+          padding: 12px 30px 13px 30px;
+          line-height: normal;
+          border-radius: 2px;
+          border: none;
+          text-transform: uppercase;
+          font-size: 14px;
+          transition: color 0.25s ease-in-out, background 0.25s ease-in-out;
+          text-align: center;
+}
+
+
+
+
+footer a{
+        color: #fff;
+}
+footer a:hover{
+        color:#868e96; 
+}
+
+.list-group-item-nborder{
+        position: relative;
+        display: block;
+        padding: 0.75rem 1.25rem;
+        margin-bottom: -1px;
+        background-color: #fff;
+        border: 1px solid rgba(0, 0, 0, 0.125);
+        border-left: none;
+        border-right: none;
+        
+}
+ 
+
+.list-group-item-action-loch.active{
+    z-index: 2;
+    color: #fff;
+    background-color: #73b7cc;
+    border-color: #73b7cc;
+} 
+
+.list-group-item:first-child {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+.list-group-item:last-child {
+    margin-bottom: 0;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+.list-group-item-nborder{
+    padding: 0.5rem 1rem;
+}
+
+.breadcrumb {
+    background-color: transparent;
+}
+.text-through{
+    text-decoration: line-through;
+}
+.btn-outline-loch:not([disabled]):not(.disabled):active, .btn-outline-loch:not([disabled]):not(.disabled).active, .show > .btn-outline-loch.dropdown-toggle{
+    color: #fff;
+}
+.btn-loch{
+    color: #fff;
+}
+.nav-item-text{
+    text-align: center;
+    a{
+        @include loch;
+    }
+}
+
+
+#progressbar1 {
+    overflow: hidden;
+    counter-reset: step;
+    display: block;
+    text-align: center;
+
+}     
+#progressbar1 li.active1 {
+    z-index: 9;
+}
+#progressbar1 li {
+    list-style-type: none;
+    color: #444 !important;
+    text-transform: uppercase;
+    font-size: 10px;
+    width: 25%;
+    float: left;
+    position: relative;
+    height: 100px;
+}
+
+#progressbar1 li.active1:before,
+#progressbar1 li.active1:after {
+    background: #73b7cc !important;
+    color: #73b7cc !important;
+}
+#progressbar1 li:before {
+    content: counter(step);
+    counter-increment: step;
+    width: 40px;
+    line-height: 40px;
+    display: block;
+    font-size: 10px;
+    color: #e6e6e6;
+    background: #e6e6e6;
+    border-radius: 100px;
+    margin: 0px auto 5px auto;
+}
+
+#progressbar1 li:after {
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: #e6e6e6;
+    position: absolute;
+    left: -50%;
+    top: 20px;
+    z-index: 0;
+}
+
+
+
+#progressbar1 li.noline.active1:after {
+    background: transparent !important;
+    color: transparent !important;
+}
+        
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 768px) { 
+    .PDList-product{
+        width: 95%;
+    }
+    
+}
