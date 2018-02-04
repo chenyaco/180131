@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/all.css">
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+	 crossorigin="anonymous">
+	<script src=js/jquery-3.2.1.min.js></script>
+	<script src=js/all.js></script>
+	<title>Document</title>
+</head>
+
+<body>
+	<div class="rwap">
+
+		<!-- As a link -->
+		<div class="bg-loch d-none d-md-block py-3">
+			<div class="text-center">
+				<a class="text-white">Free shipping on all orders over $50</a>
+			</div>
+		</div>
+		<!-- navbar -->
+		<div class="bg-light navbg-light sticky-top">
+			<div class="container py-1">
+				<nav class="navbar navbar-expand-md navbar-light pl-0">
+					<h1 class="navbar-brand">
+						<a class="logo" href="index.html">seaside</a>
+					</h1>
+		
+					<div class="ml-auto">
+						<a class="d-md-none d-inline-flex text-secondary" data-toggle="modal" data-target="#search" href="#">
+							<i class="fa fa-search" aria-hidden="true"></i>
+						</a>
+						<div class=" d-md-none d-inline-flex dropdown">
+							<!-- 購物車 -->
+							<a href="cart.html" class="nav-link btn btn-sm text-left text-secondary">
+								<i class="fa fa-shopping-cart" aria-hidden="true"></i>
+								<span class="badge badge-pill badge-danger">3</span>
+							</a>
+						</div>
+					</div>
+		
+		
+					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown"
+					 aria-expanded="false" aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+					<div class="collapse navbar-collapse" id="navbarNavDropdown">
+						<ul class="navbar-nav ml-auto">
+							<li class="nav-item active text-center">
+								<a class="nav-link" href="index.html">首頁
+									<span class="sr-only">(current)</span>
+								</a>
+							</li>
+							<li class="nav-item dropdown text-center">
+								<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+									商店
+								</a>
+								<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+									<a class="dropdown-item" href="PDList.html">全部商品</a>
+									<a class="dropdown-item" href="PDList.html#list-best">茶杯</a>
+									<a class="dropdown-item" href="PDList.html#list-all">茶葉</a>
+								</div>
+							</li>
+							<li class="nav-item text-center">
+								<a class="nav-link" href="about.html">關於我們</a>
+							</li>
+							<li class="nav-item text-center">
+								<a class="nav-link" data-toggle="modal" data-target="#loginModel" href="#">登入</a>
+							</li>
+							<li class="nav-item text-center">
+								<a class="nav-link" data-toggle="modal" data-target="#registerModel" href="#">註冊</a>
+							</li>
+							<li class="nav-item text-center  d-none d-md-block">
+								<a class="nav-link" data-toggle="modal" data-target="#search" href="#">
+									<i class="fa fa-search" aria-hidden="true"></i>
+								</a>
+							</li>
+							<li class="nav-item text-center d-none d-md-block">
+								<!-- <a class="nav-link" href="#">
+													<i class="fa fa-shopping-cart" aria-hidden="true"></i>
+													<span class="badge badge-pill badge-secondary">3</span>
+												</a> -->
+								<div class="dropdown">
+									<!-- 購物車 -->
+									<a class="nav-link btn btn-sm text-left" data-toggle="dropdown" data-flip="false">
+										<i class="fa fa-shopping-cart" aria-hidden="true"></i>
+										<span class="badge badge-pill badge-danger">3</span>
+									</a>
+									<div class="dropdown-menu dropdown-menu-right" style="min-width:300px;">
+										<div class="px-4 py-3">
+											<h6>已選擇商品</h6>
+											<table class="table table-sm">
+												<tbody>
+													<tr>
+														<td class="align-middle text-center">
+															<a href="#removeModal" class="text-muted" data-toggle="modal" data-target="#trashModel" data-title="刪除 療癒暖暖黃杯 件">
+																<i class="fa fa-trash-o" aria-hidden="true"></i>
+															</a>
+														</td>
+														<td class="align-middle">療癒暖暖黃杯</td>
+														<td class="align-middle">1件</td>
+														<td class="align-middle text-right">$420</td>
+													</tr>
+													<tr>
+														<td class="align-middle text-center">
+															<a href="#removeModal" class="text-muted" data-toggle="modal" data-target="#trashModel" data-title="刪除 極簡灰調茶杯組 1 件">
+																<i class="fa fa-trash-o" aria-hidden="true"></i>
+															</a>
+														</td>
+														<td class="align-middle">極簡灰調茶杯組</td>
+														<td class="align-middle">1件</td>
+														<td class="align-middle text-right">$380</td>
+													</tr>
+													<tr>
+														<td class="align-middle text-center">
+															<a href="#removeModal" class="text-muted" data-toggle="modal" data-target="#trashModel" data-title="刪除 療癒暖暖綠杯 1 件">
+																<i class="fa fa-trash-o" aria-hidden="true"></i>
+															</a>
+														</td>
+														<td class="align-middle">療癒暖暖綠杯</td>
+														<td class="align-middle">1件</td>
+														<td class="align-middle text-right">$520</td>
+													</tr>
+												</tbody>
+											</table>
+											<a href="cart.html" class="btn btn-primary btn-block">結帳去</a>
+										</div>
+									</div>
+								</div>
+								<!-- 購物車END -->
+							</li>
+						</ul>
+					</div>
+				</nav>
+			</div>
+		</div>
+		
+		<!-- navbar END -->
+
+
+		<content>
+			<section>
+				<div class="container">
+					<nav aria-label="breadcrumb">
+						<ol class="breadcrumb pl-0">
+							<li class="breadcrumb-item">
+								<a href="index.html">首頁</a>
+							</li>
+							<li class="breadcrumb-item active" aria-current="page">新品搶先看</li>
+						</ol>
+					</nav>
+				</div>
+			</section>
+			<section>
+				<div class="container">
+					<div class="row my-3 mb-5">
+						<div class="col-md-6 col-sm-12 mb-3">
+							<a ><img src="https://cdn.shopify.com/s/files/1/0809/0413/products/classic-mug-with-infuser_55d0b0a263ba0_1000x.jpg?v=1439741483" alt=""></a>
+						</div>
+						<div class="col-md-6 col-sm-12">
+							<div class="ml-3">
+								<h1 class="h5 font-weight-bold">Classic Mug with Infuser</h1>
+								<div class="align-items-end mb-3">
+									<span class="text-muted text-through">原價$1299</span>
+									<div class="h5 ml-auto mb-0 text-danger font-weight-bold mt-2">
+										<small>特價 NT$</small>
+										<strong>520</strong>
+									</div>
+								</div>
+								<span class="text-secondary">尺寸：</span>			
+								<div class="btn-group btn-group-toggle btn-group-sm" data-toggle="buttons">
+									<label class="btn btn-outline-loch rounded-0 active">
+										<input type="radio" name="options" id="option1" autocomplete="off" checked> 大
+									</label>
+									<label class="btn btn-outline-loch rounded-0">
+										<input type="radio" name="options" id="option2" autocomplete="off"> 中
+									</label>
+									<label class="btn btn-outline-loch rounded-0">
+										<input type="radio" name="options" id="option3" autocomplete="off"> 小
+									</label>
+								</div>
+							<div class="input-group mt-3">
+								<select name="" id="" class="form-control rounded-0 mr-3">
+									<option value="1">1</option>
+									<option value="2">2</option>
+									<option value="3">3</option>
+								</select>
+								<a href="cart.html" class="btn btn-loch rounded-0">加 入 購 物 車</a>
+							</div>
+							<hr>
+								<span class="text-secondary">
+									 ★純手工吹製工藝，晶瑩透亮 <br>★切縫式濾口設計，迅速分離茶水<br>★高硼矽耐熱玻璃，可承受急速溫差<br>★優質玻璃材質不會析出任何有害物 
+								</span>								
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section>
+				<div class="container">
+					<ul class="nav nav-tabs d-flex justify-content-center " id="myTab" role="tablist">
+						<li class="nav-item w-25 nav-item-text">
+							<a class="nav-link active show" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">商品介紹</a>
+						</li>
+						<li class="nav-item w-25 nav-item-text">
+							<a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">商品規格</a>
+						</li>
+						<li class="nav-item w-25 nav-item-text">
+							<a class="nav-link" id="messages-tab" data-toggle="tab" href="#messages" role="tab" aria-controls="messages" aria-selected="false">售後服務</a>
+						</li>
+					</ul>
+					<div class="tab-content">
+						<div class="tab-pane show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+							<div class="p-3 text-secondary">
+								<div class="container">
+									<a>
+										<img class="my-1 img-fluid" src="https://cdn.shopify.com/s/files/1/0809/0413/products/classic-mug-with-infuser_55d0b0a1482e0_1000x.jpg?v=1439741483"
+										 alt="">
+									</a>
+									<a>
+										<img class="my-1 img-fluid" src="https://cdn.shopify.com/s/files/1/0809/0413/products/classic-mug-with-infuser_55d0b0a1d904e_1000x.jpg?v=1439741483"
+										 alt="">
+									</a>
+									<a>
+										<img class="my-1 img-fluid" src="https://cdn.shopify.com/s/files/1/0809/0413/products/happy-cup_55d0b09e5e675_1000x.jpg?v=1439741662"
+										 alt="">
+									</a>
+								</div>
+								
+							</div>
+						</div>
+						<div class="tab-pane" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+							<div class="p-3 text-secondary">
+								<div class="container">
+									 你可以在Tea Ave商店買這個杯子。 我們最喜歡的項目之一。這種帶有浸泡器和蓋子的茶杯是一種一站式服務，用來灌注，服務和飲用你的茶杯，使用杯子簡單地釀造出精緻鬆散的茶。可作為旅行茶杯使用，或在家中進行方便的輸液。保持你的茶熱。只需在輸液器中加入鬆散的茶葉，加入熱水，然後在路上。
+									<br>
+									<br> 品牌：香港RELEA物生物
+									<br> 型號：JV0102154
+									<br> 產品：大蘑菇耐熱玻璃泡茶杯
+									<br> 尺寸：12.6 x 8 x 12.7cm
+									<br> 重量：290g
+									<br> 容量：500ml
+									<br> 材質：高硼矽玻璃
+									<br> 保固：新品瑕疵
+									<br> 試用範圍：商品為個人衛生品故不開放試用
+									<br>
+								</div>
+							</div>
+							</div>
+						<div class="tab-pane" id="messages" role="tabpanel" aria-labelledby="messages-tab">
+							<div class="p-3 text-secondary">
+								<div class="container">
+									 退換貨須知：
+									<br> 1.商品到貨享十天猶豫期之權益（注意！猶豫期非試用期），辦理退貨商品必須是全新狀態且包裝完整，否則將會影響退貨權限各類商品退換貨限制說明
+									<br> 2.個人衛生用品除商品本身有瑕疵外，未拆封商品仍享有十天猶豫期之退貨權利。但已拆封 (如剪標、下水等情形…)，依據《通訊交易解除權合理例外情事適用準則》，本公司無法接受退換貨。
+									<br> ※個人衛生用品項目：內衣褲(含隱形胸罩、胸扥、胸貼、透明肩帶、水餃墊/美胸墊、襯裙)、塑身衣(含馬甲、束褲、束腿、腰夾、內搭)、泳裝、襪子、紙尿褲。
+									<br>
+									<br> 運送服務：
+									
+									
+									<br> 1.我們所提供的產品配送區域範圍目前僅限台灣本島。
+									<br> 2.商品之實際配貨日期、退換貨日期，依我們向您另行通知之內容為準。
+									<br> .針對大型商品(包括：大型家電、家具床墊、健身按摩器材、車類...等)，我們將於完成收款確認後，一天內〈不含例假日〉將會有專人與您確認相關配送細節等的聯繫。偏遠地區、樓層費及其它加價費用，皆由廠商於約定配送時一併告知，廠商將保留出貨與否的權利。
+									<br>
+									<br> 售後服務：
+									
+									<br> 1.如您收到商品，請依正常程序儘速檢查商品，若商品發生新品瑕疵之情形，您可申請更換新品或退貨，請直接點選聯絡我們。
+									<br> 2.若您對於購買流程、付款方式、退貨及商品運送方式有疑問，你可直接點選會員中心。
+									<br>
+									<br> 特別說明：
+									
+									<br> 1.本公司對於所販售具遞延性之商品或服務，消費者權益均受保障。如因合作廠商無法提供商品或服務，請與本公司聯繫辦理退貨或換成等值商品。
+									<br> 2.※特惠商品，不適用折價券
+									<br>
+									<br>
+								</div>
+							</div>
+						</div>
+					</div>
+				
+					<script>
+						$(function () {
+							$('#myTab li:first-child a').tab('show')
+						})
+					</script>
+				
+				</div>
+
+			</section>
+
+
+		</content>
+
+
+
+		<footer>
+			<div class="bg-loch py-3">
+				<div class="container">
+					<div class="row text-white">
+						<div class="contact col-md-3 col-6 my-2">
+							<div class="h5 mb-4">Service</div>
+							<p class="mb-2">(333) 123 456</p>
+							<p>
+								<a class="text-white" href="mailto:service@chenyaco.com.tw">service@chenyaco.com.tw</a>
+							</p>
+						</div>
+						<div class="social col-md-3 col-6 my-2">
+							<div class="h5 mb-4">Follow Us</div>
+							<ul>
+								<li class="mb-2">
+									<a href="#">
+										<i class="fa fa-facebook-official mr-1" aria-hidden="true"></i>Facebook</a>
+								</li>
+								<li class="mb-2">
+									<a href="#">
+										<i class="fa fa-twitter-square mr-1" aria-hidden="true"></i>Twitter</a>
+								</li>
+								<li class="mb-2">
+									<a href="#">
+										<i class="fa fa-instagram mr-1" aria-hidden="true"></i>Instagram</a>
+								</li>
+							</ul>
+						</div>
+						<div class="social col-md-3 col-6 my-2">
+							<div class="h5 mb-4">Customer Help</div>
+							<ul>
+								<li class="mb-2">
+									<a href="#">購物說明</a>
+								</li>
+								<li class="mb-2">
+									<a href="about.html">關於我們</a>
+								</li>
+							</ul>
+						</div>
+						<div class="col-md-3 col-6 my-2">
+							<div class="h5 mb-4">SIGNUP FOR NEWS</div>
+							<div class="input-group input-group-sm mb-3">
+								<input type="text" class="form-control" placeholder="輸入Email" aria-label="Recipient's username" aria-describedby="basic-addon2">
+								<div class="input-group-append ">
+									<button class="btn btn-outline-light" type="button">送出</button>
+								</div>
+							</div>
+						</div>
+					</div>
+		
+				</div>
+		
+			</div>
+		</footer>
+
+
+
+	</div>
+
+
+	<!-- loginModel -->
+	<div class="modal fade" id="loginModel" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header bg-loch">
+					<h5 class="modal-title text-white" id="exampleModalLabel">登入</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<form>
+						<div class="form-group">
+							<label for="exampleInputEmail1">Email</label>
+							<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="請輸入email">
+							<small id="emailHelp" class="form-text text-muted">我們絕不會隨意將你的 email 給予第三者</small>
+						</div>
+						<div class="form-group">
+							<label for="exampleInputPassword1">密碼</label>
+							<input type="password" class="form-control" id="exampleInputPassword1" placeholder="請輸入密碼">
+						</div>
+						<div class="form-check">
+							<label class="form-check-label">
+								<input type="checkbox" class="form-check-input"> 記住帳號
+							</label>
+						</div>
+					</form>
+				</div>
+				<div class="modal-footer">
+					<a href="" class="mr-auto" data-dismiss="modal" data-toggle="modal" data-target="#registerModel">切換到註冊</a>
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">取消</button>
+					<button type="button" class="btn btn-loch text-white">登入</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+	<!-- registerModel -->
+	<div class="modal fade" id="registerModel" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-lg" role="document">
+			<div class="modal-content">
+				<div class="modal-header bg-loch">
+					<h5 class="modal-title text-white" id="exampleModalLabel">註冊seaside</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<div class="row">
+						<div class="col">
+							<h3>seaside</h3>
+							<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae quisquam ipsa dolore, officiis maiores impedit
+								laboriosam tempore earum eos minima!</p>
+							<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae quisquam ipsa dolore, officiis maiores impedit
+								laboriosam tempore earum eos minima!</p>
+
+						</div>
+						<div class="col">
+							<form>
+								<div class="form-group">
+									<label for="exampleInputEmail1">Email</label>
+									<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="請輸入email">
+									<small id="emailHelp" class="form-text text-muted">我們絕不會隨意將你的 email 給予第三者</small>
+								</div>
+								<div class="form-group">
+									<label for="exampleInputPassword1">密碼</label>
+									<input type="password" class="form-control" id="exampleInputPassword1" placeholder="請輸入密碼">
+								</div>
+								<div class="form-group">
+									<label for="exampleInputPassword1">確認密碼</label>
+									<input type="password" class="form-control" id="exampleInputPassword1" placeholder="請確認密碼">
+								</div>
+								<div class="form-check">
+									<label class="form-check-label">
+										<input type="checkbox" class="form-check-input"> 同意條款
+									</label>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<a href="" class="mr-auto" data-dismiss="modal" data-toggle="modal" data-target="#loginModel">切換到登入</a>
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">取消</button>
+					<button type="button" class="btn btn-loch text-white">註冊</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+	<!-- loginModel -->
+	<div class="modal fade" id="search" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header bg-loch">
+					<h5 class="modal-title text-white" id="exampleModalLabel">查詢</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<div class="input-group mb-3">
+						<input type="text" class="form-control" aria-label="Recipient's username" aria-describedby="basic-addon2">
+						<div class="input-group-append">
+							<button class="btn btn-outline-loch" type="button">查詢</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+	<!-- trash Model -->
+	<div class="modal" id="trashModel" tabindex="-1" role="dialog">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header bg-danger">
+					<h5 class="modal-title text-white">刪除商品</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<p>是否確認刪除商品</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-outline-secondary">否</button>
+					<button type="button" class="btn btn-outline-danger px-5" data-dismiss="modal">是</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!--  trash Model END  -->
+
+
+
+
+
+
+
+
+	<!-- Optional JavaScript -->
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+	 crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+	 crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4"
+	 crossorigin="anonymous"></script>
+</body>
+
+</html>
