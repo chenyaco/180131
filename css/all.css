@@ -96,9 +96,9 @@ body {
 .navbg-light {
   opacity: .9; }
 
-.header-carousel-item {
-  height: 350px; }
-
+/* .header-carousel-item {
+      height: 350px;
+	} */
 .content-topimg-item {
   min-height: 150px; }
 
@@ -159,7 +159,7 @@ body {
   display: table;
   top: 0;
   left: 15px;
-  width: 94%;
+  width: 95%;
   height: 100%;
   background: rgba(255, 255, 255, 0.9);
   opacity: 0;
